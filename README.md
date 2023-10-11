@@ -1,1 +1,1 @@
-<h1> A responsive portfolio site made in pure vanilla <span style="background-color:teal;">JS</span>, <span style="background-color:maroon;">CSS</span> and <span style="background-color:green;">HTML5</span></h1>
+<h1> A responsive portfolio site made in pure vanilla <span style="color:teal;">JS</span>, <span style="color:maroon;">CSS</span> and <span style="color:green;">HTML5</span></h1>
