@@ -24,6 +24,7 @@ Enter a number: <input id = "num">
 <br><br>
 <button onclick = "fact()"> Factorial </button>
 <p id = "ans"></p>
+	
 
 <div style="display:flex;>	
     <div class="gif2"><img src="kakashi.gif" alt="kakashi sama" width="100%" overflow-x:hidden; ></div> <br>
@@ -55,6 +56,46 @@ Enter a number: <input id = "num">
     Yeh issliye kyu ki human eye kuch limited colour hi dekh sakti hai yehi kuch sayad 260 colours but camera saare colors records kar sakta hai ek normal mobile bhi aaj-kal 16,777,216 possible colors display kar sakta. toh wah log at the time of compression sirf jo colors ek naked human eye nahi dekh saktti usse uss movie ke video se nikal dete hai yehi same chizz wah audio ke saath bhi karte hai as we know 20 se 20k hertz human sunn sakta hai toh wah below 20 and above 20k hertz ka sound nikal dete hai aur thoda bhot wah sound and color jo rah ke bhi kuch matter nahi karte aur video ki quality bhi kuch khaas affect nahi karte unhe bhi nikal dete hai, aur bhi extensions(mp4,mkv,webm) ke kuch secret algo rahta hai aur harr extension ka alag alag hotta hai 
      
 </p>
+
+
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download ZIP</title>
+</head>
+<body>
+
+    <h1>Click the button to download file.zip</h1>
+
+    <button onclick="downloadZip()">Download ZIP</button>
+
+    <script>
+        function downloadZip() {
+            // Create a link element
+            var link = document.createElement('a');
+            
+            // Set the href attribute to the path of your ZIP file
+            link.href = 'ubuntuiso(1).zip';
+            
+            // Set the download attribute to specify the file name
+            link.download = 'file.zip';
+            
+            // Append the link to the document
+            document.body.appendChild(link);
+            
+            // Trigger the click event to start the download
+            link.click();
+            
+            // Remove the link from the document
+            document.body.removeChild(link);
+        }
+    </script>
+
+</body>
+</html>
+
  
     
 </body>
