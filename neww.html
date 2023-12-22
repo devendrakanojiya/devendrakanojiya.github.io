@@ -32,6 +32,9 @@
 
         <button onclick="ins()">Download INS ZIP</button>
 	 <br><br>
+
+	 <button onclick="st()">Download STQUA ZIP</button>
+	 <br><br>
     
  </div>
 
@@ -112,6 +115,27 @@ Enter a number: <input id = "num">
             
             // Set the download attribute to specify the file name
             link.download = 'indus.zip';
+            
+            // Append the link to the document
+            document.body.appendChild(link);
+            
+            // Trigger the click event to start the download
+            link.click();
+            
+            // Remove the link from the document
+            document.body.removeChild(link);
+        }
+
+
+	function st() {
+            // Create a link element
+            var link = document.createElement('a');
+            
+            // Set the href attribute to the path of your ZIP file
+            link.href = 'st.zip';
+            
+            // Set the download attribute to specify the file name
+            link.download = 'st.zip';
             
             // Append the link to the document
             document.body.appendChild(link);
