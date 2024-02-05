@@ -3,3 +3,7 @@ https://holopin.me/devendrakanojiya
 
 https://holopin.io/@devendrakanojiya
 
+<a href="https://xplorehow.in">portfolio</a>
+
+
+<a href="https://devendrakanojiya.github.io">github io</a>
