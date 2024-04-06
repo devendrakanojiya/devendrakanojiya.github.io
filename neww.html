@@ -35,6 +35,8 @@
 
 	 <button onclick="st()">Download STQUA ZIP</button>
 	 <br><br>
+	 <button onclick="resume()">Download unfinished Resume 2022 </button>
+	 <br><br>
     
  </div>
 
@@ -145,6 +147,26 @@ Enter a number: <input id = "num">
             
             // Remove the link from the document
             document.body.removeChild(link);
+
+        function resume() {
+            // Create a link element
+            var link = document.createElement('a');
+            
+            // Set the href attribute to the path of your ZIP file
+            link.href = 'devendra_resume.pdf';
+            
+            // Set the download attribute to specify the file name
+            link.download = 'devendra_resume.pdf';
+            
+            // Append the link to the document
+            document.body.appendChild(link);
+            
+            // Trigger the click event to start the download
+            link.click();
+            
+            // Remove the link from the document
+            document.body.removeChild(link);
+        }
         }
     </script>
     
