@@ -7,8 +7,29 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="btn"><a href="/v2.html">Read-Time:: 5sec.</a></div>
-        <div class="btn"><a href="v1.html" >Read-Time:: 3min.</a></div>
-  </div>    
+<div class="container">
+  <div class="btn" data-link="/v2.html"><a href="#">Read-Time:: 5sec.</a></div>
+  <div class="btn" data-link="v1.html"><a href="#">Read-Time:: 3min.</a></div>
+</div>
+
+
+  <script>
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      // Get the link from the data attribute
+      const link = this.getAttribute('data-link');
+      // Get the anchor element to check the animation duration
+      const anchor = this.querySelector('a');
+      // Start the animation if the button is hovered
+      this.classList.add('hovered');
+      // Set a timeout for the animation duration
+      setTimeout(() => {
+        // Redirect to the link after the animation completes
+        window.location.href = link;
+      }, 500); // Match this duration to your CSS animation duration
+    });
+  });
+</script>
+   
 </body>
